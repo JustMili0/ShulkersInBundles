@@ -1,10 +1,10 @@
 package net.justmili.quilt;
 
 import org.quiltmc.loader.api.ModContainer;
-import net.justmili.AlwaysShield;
+import net.justmili.ShulkersInBundles;
 
-public final class AlwaysShieldQuilt {
+public final class ShulkersInBundlesQuilt {
     public void onInitialize(ModContainer mod) {
-        AlwaysShield.init();
+        ShulkersInBundles.init();
     }
 }
