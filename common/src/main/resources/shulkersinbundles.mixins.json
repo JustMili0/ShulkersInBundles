@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.justmili.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "mixins": [
+    "NoBundlesInBundles",
+    "NoBundlesInShulkers",
+    "NoBundlesInShulkersThroughFace",
+    "ShulkersInBundles"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
