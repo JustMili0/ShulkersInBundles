@@ -42,7 +42,14 @@ public class ShulkerWeightMixin {
     }
 }
 ```
-Keep in mind, if multiple mods modify the shulker weight, the last-applied mixin will be used.
+Keep in mind, if multiple mods modify the shulker weight, the last-applied (or with highest priority) mixin will be used.
+
+And no, I'm not making a config, too much work for a small mod like this especially since this is on 4 loaders and over 10 versions.
+
+<hr>
+
+### Server-side & client-side
+Shulkers In Bundles can be installed purely server-side and does not require the client to have it, **BUT** it is recommended to have it also on the client because without it the bundle tooltip will look very cursed.
 
 <hr>
 

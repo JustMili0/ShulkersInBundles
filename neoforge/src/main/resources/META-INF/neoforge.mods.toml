@@ -11,7 +11,7 @@ authors = "JustMili"
 description = '''
 Making bundles a little bit more convenient and useful by allowing to put shulkers in them
 '''
-logoFile = ""
+logoFile = "icon.png"
 
 [[dependencies.shulkersinbundles]]
 modId = "neoforge"
@@ -23,7 +23,7 @@ side = "BOTH"
 [[dependencies.shulkersinbundles]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.9,1.21.11]"
+versionRange = "[1.21.2,1.21.11]"
 ordering = "NONE"
 side = "BOTH"
 
