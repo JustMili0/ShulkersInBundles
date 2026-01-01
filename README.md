@@ -14,7 +14,7 @@ I come to change it, and make it so Bundles can now store up to 16 Shulkers in t
 Until I'm 2 meters under. I love Minecraft _and_ programming, so I'll keep updating the mod for however long I live.
 
 ### Ensured no exploits or issues?
-I've made sure that while you can put Shulkers in Bundles, you cannot put Bundles in Bundles or Bundles in Shulkers, preventing near-infinite storage in a single slot.
+I've made sure that while you can put Shulkers in Bundles, but you cannot put Bundles in Bundles or Bundles in Shulkers, preventing near-infinite storage in a single slot.
 That is also to prevent making bundles with massive amounts of data that could overload a server or even chunk-ban.
 
 ### Can I change the max shulker amount?
