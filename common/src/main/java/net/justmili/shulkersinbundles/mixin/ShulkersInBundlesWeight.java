@@ -1,6 +1,6 @@
-package net.justmili.mixin;
+package net.justmili.shulkersinbundles.mixin;
 
-import net.justmili.data.ShulkerFractions;
+import net.justmili.shulkersinbundles.data.ShulkerFractions;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.BundleContents;
