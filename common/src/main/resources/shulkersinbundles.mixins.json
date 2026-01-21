@@ -1,14 +1,14 @@
 {
   "required": true,
-  "package": "net.justmili.mixin",
+  "package": "net.justmili.shulkersinbundles.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "mixins": [
-    "net.justmili.shulkersinbundles.mixin.NoBundlesInBundles",
-    "net.justmili.shulkersinbundles.mixin.NoBundlesInShulkers",
-    "net.justmili.shulkersinbundles.mixin.NoBundlesInShulkersThroughFace",
-    "net.justmili.shulkersinbundles.mixin.ShulkersInBundlesInsert",
-    "net.justmili.shulkersinbundles.mixin.ShulkersInBundlesWeight"
+    "NoBundlesInBundles",
+    "NoBundlesInShulkers",
+    "NoBundlesInShulkersThroughFace",
+    "ShulkersInBundlesInsert",
+    "ShulkersInBundlesWeight"
   ],
   "injectors": {
     "defaultRequire": 1
