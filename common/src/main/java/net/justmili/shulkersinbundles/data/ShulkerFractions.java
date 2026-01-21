@@ -1,4 +1,4 @@
-package net.justmili.data;
+package net.justmili.shulkersinbundles.data;
 
 import org.apache.commons.lang3.math.Fraction;
 

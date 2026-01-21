@@ -20,11 +20,11 @@ That is also to prevent making bundles with massive amounts of data that could o
 ### Can I change the max shulker amount?
 Yes actually! This mod exposes a supported API for other mods to modify how many shulkers can be put in the bundle.
 
-An example:
+An example (1.21.2-1.21.11):
 ```java
 package xyz.yourmod.mixin; //doesn't matter what your package is named
 
-import net.justmili.data.ShulkerFractions;
+import net.justmili.data.shulkersinbundles.ShulkerFractions;
 import org.apache.commons.lang3.math.Fraction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

@@ -1,4 +1,4 @@
-package net.justmili.mixin;
+package net.justmili.shulkersinbundles.mixin;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.BundleItem;

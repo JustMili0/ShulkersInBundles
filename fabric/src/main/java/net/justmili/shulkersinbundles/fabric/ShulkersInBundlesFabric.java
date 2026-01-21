@@ -1,6 +1,6 @@
-package net.justmili.fabric;
+package net.justmili.shulkersinbundles.fabric;
 
-import net.justmili.ShulkersInBundles;
+import net.justmili.shulkersinbundles.ShulkersInBundles;
 import net.fabricmc.api.ModInitializer;
 
 public final class ShulkersInBundlesFabric implements ModInitializer {

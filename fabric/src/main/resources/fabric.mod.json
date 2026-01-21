@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.justmili.fabric.ShulkersInBundlesFabric"
+      "net.justmili.shulkersinbundles.fabric.ShulkersInBundlesFabric"
     ]
   },
   "mixins": [
