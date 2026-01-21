@@ -10,10 +10,10 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(BundleContents.Mutable.class)
 public class NoBundlesInBundles {
-    @WrapOperation(method = "tryInsert", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;canFitInsideContainerItems()Z"))
+    @WrapOperation(method = "tryInsert", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;canFitInsideContainerItems()Z"), require = 0)
     private boolean preventBundlesInBundles(Item item, Operation<Boolean> original) {
         if (item instanceof BundleItem) {
-            return true;
+            return false;
         }
         return original.call(item);
     }
