@@ -10,11 +10,9 @@ move ..\quilt\build\libs\*.jar . >nul
 move ..\forge\build\libs\*.jar . >nul
 move ..\neoforge\build\libs\*.jar . >nul
 
-timeout /t 3 /nobreak >nul
 echo Deleting files...
 del /q *dev-shadow.jar >nul
 
-timeout /t 1 /nobreak >nul
 echo Sorting files...
 move .\*Fabric.jar .\fabric\
 move .\*Quilt.jar .\quilt\
