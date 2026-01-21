@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.justmili.shulkersinbundles.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "mixins": [
+    "NoBundlesInShulkers",
+    "NoBundlesInShulkersThroughFace",
+    "ShulkersInBundlesWeight"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "shulkersinbundles.refmap.json"
+}

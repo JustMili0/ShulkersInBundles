@@ -1,4 +1,4 @@
-package net.justmili.shulkersinbundles.neoforge;
+package net.justmili.shulkersinbundles;
 
 import net.justmili.shulkersinbundles.ShulkersInBundles;
 import net.neoforged.fml.common.Mod;

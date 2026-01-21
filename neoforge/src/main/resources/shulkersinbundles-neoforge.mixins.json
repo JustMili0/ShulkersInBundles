@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.justmili.shulkersinbundles.neoforge.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "mixins": [
+    "NoBundlesInBundlesNeo",
+    "ShulkersInBundlesInsertNeo"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "shulkersinbundles-neoforge.refmap.json"
+}

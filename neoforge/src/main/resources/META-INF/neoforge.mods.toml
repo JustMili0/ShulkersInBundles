@@ -29,3 +29,6 @@ side = "BOTH"
 
 [[mixins]]
 config = "shulkersinbundles.mixins.json"
+
+[[mixins]]
+config = "shulkersinbundles-neoforge.mixins.json"
