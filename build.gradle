@@ -49,12 +49,9 @@ subprojects {
     def name = project.name.toLowerCase()
     if (name.contains('fabric')) {
         detectedPlatform = 'Fabric'
-    } else if (name.contains('quilt')) {
-        detectedPlatform = 'Quilt'
     } else if (name.contains('neoforge')) {
         detectedPlatform = 'NeoForge'
     } else if (name.contains('forge')) {
-        minMcVersion = '1.21.3'
         detectedPlatform = 'Forge'
     } else {
         detectedPlatform = 'Unknown'

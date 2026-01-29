@@ -1,20 +1,20 @@
 package net.justmili.shulkersinbundles.mixin;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.BundleItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.BundleContents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BundleContents.Mutable.class)
 public class NoBundlesInBundles {
-    @WrapOperation(method = "tryInsert", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;canFitInsideContainerItems()Z"), require = 0)
-    private boolean preventBundlesInBundles(Item item, Operation<Boolean> original) {
-        if (item instanceof BundleItem) {
-            return false;
+    @Inject(method = "tryTransfer", at = @At("HEAD"), cancellable = true)
+    private void preventBundlesInBundles(Slot slot, Player player, CallbackInfoReturnable<Integer> cir) {
+        if (slot.getItem().getItem() instanceof BundleItem) {
+            cir.setReturnValue(0);
         }
-        return original.call(item);
     }
 }
