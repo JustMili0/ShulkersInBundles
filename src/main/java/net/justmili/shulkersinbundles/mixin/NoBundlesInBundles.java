@@ -11,10 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BundleContents.class)
 public class NoBundlesInBundles {
     @Inject(method = "canItemBeInBundle", at = @At("HEAD"), cancellable = true)
-    private static void preventBundlesInBundles(
-        ItemStack stack,
-        CallbackInfoReturnable<Boolean> cir
-    ) {
+    private static void preventBundlesInBundles(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (stack.getItem() instanceof BundleItem) {
             cir.setReturnValue(false);
         }
