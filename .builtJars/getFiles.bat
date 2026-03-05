@@ -1,3 +1,0 @@
-@echo off
-echo Moving files...
-move ..\build\libs\*.jar . >nul
