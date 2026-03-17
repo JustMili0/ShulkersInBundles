@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BundleItem.class)
 public class NoInsertItemsInBundlesInShulkers {
     @Inject(method = "overrideOtherStackedOnMe", at = @At("HEAD"), cancellable = true)
-    private void preventItemsInBundlesInShulkers(ItemStack itemStack, ItemStack itemStack2, Slot slot, ClickAction clickAction, Player player, SlotAccess slotAccess, CallbackInfoReturnable<Boolean> cir){
+    private void preventItemsInBundlesInShulkers(ItemStack self, ItemStack other, Slot slot, ClickAction clickAction, Player player, SlotAccess slotAccess, CallbackInfoReturnable<Boolean> cir){
         if (slot.container instanceof ShulkerBoxBlockEntity) {
             cir.setReturnValue(false);
         }
