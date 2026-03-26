@@ -30,6 +30,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(':common')
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
 
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')

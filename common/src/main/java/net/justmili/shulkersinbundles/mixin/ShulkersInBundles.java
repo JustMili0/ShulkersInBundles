@@ -1,7 +1,10 @@
 package net.justmili.shulkersinbundles.mixin;
 
+import com.mojang.serialization.DataResult;
 import net.justmili.shulkersinbundles.data.ShulkerFractions;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.BundleContents;
 import net.minecraft.world.level.block.ShulkerBoxBlock;
@@ -23,11 +26,13 @@ public class ShulkersInBundles {
         }
     }
     @Inject(method = "getWeight", at = @At("HEAD"), cancellable = true)
-    private static void shulkerWeight(ItemStack stack, CallbackInfoReturnable<Fraction> cir) {
-        if (stack.getItem() instanceof BlockItem blockItem
+    private static void shulkerWeight(ItemInstance instance, CallbackInfoReturnable<DataResult<Fraction>> cir) {
+        Item item = instance.typeHolder().value();
+
+        if (item instanceof BlockItem blockItem
             && blockItem.getBlock() instanceof ShulkerBoxBlock) {
 
-            cir.setReturnValue(ShulkerFractions.getShulkerWeight());
+            cir.setReturnValue(DataResult.success(ShulkerFractions.getShulkerWeight()));
         }
     }
 }
