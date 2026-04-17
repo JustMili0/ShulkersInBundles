@@ -1,9 +1,9 @@
 package net.justmili.shulkersinbundles.fabric;
 
-import net.justmili.shulkersinbundles.ShulkersInBundles;
 import net.fabricmc.api.ModInitializer;
+import net.justmili.shulkersinbundles.ShulkersInBundles;
 
-public final class ShulkersInBundlesFabric implements ModInitializer {
+public class ShulkersInBundlesFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         ShulkersInBundles.init();

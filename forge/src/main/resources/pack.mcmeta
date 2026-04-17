@@ -1,6 +1,7 @@
 {
   "pack": {
-    "description": "Shulkers In Bundles",
-    "pack_format": 48
+    "description": "Mod Resources",
+    "min_format": 88.0,
+    "max_format": 9999.0
   }
 }

@@ -1,17 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "shulkersinbundles",
+  "id": "${mod_id}",
   "version": "${mod_version}",
-  "name": "Shulkers In Bundles",
-  "description": "Making bundles a little bit more convenient and useful by allowing to put shulkers in them",
-  "authors": [
-    "JustMili"
-  ],
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": ["${mod_authors}"],
   "contact": {
     "homepage": "https://modrinth.com/mod/shulkers-in-bundles",
-    "sources": "https://github.com/JustMili0/ShulkersInBundles"
+    "sources": "https://github.com/Lumynity-Studios/ShulkersInBundles",
+    "issues": "https://github.com/Lumynity-Studios/ShulkersInBundles/issues"
   },
-  "license": "MIT",
+  "license": "${mod_license}",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
@@ -20,13 +19,10 @@
     ]
   },
   "mixins": [
-    "shulkersinbundles.mixins.json"
+    "${mod_id}.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
-    "minecraft": [
-      "26.1"
-    ],
-    "java": ">=21"
+    "minecraft": "${minecraft_version_constraint}"
   }
 }
