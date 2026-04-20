@@ -12,8 +12,9 @@ by allowing to put up to 16 shulkers in a single bundle.
 To prevent infinite storage in a single slot, using the mod to perhaps chunk-ban people, or even just overloading servers or your own singleplayer
 worlds, the mod disables some things.
 - You can no longer put Bundles in Shulkers
+  - Except if they're empty
 - You can no longer put Bundles in Bundles
-
+  - Except if they're empty
 <hr>
 
 ### Open API
