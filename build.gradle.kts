@@ -1,6 +1,8 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import me.modmuss50.mpp.ModPublishExtension
 import me.modmuss50.mpp.ReleaseType
+import java.util.Locale
+import java.util.Locale.getDefault
 
 plugins {
     java
@@ -117,7 +119,12 @@ subprojects {
         }
 
         extensions.configure<ModPublishExtension>("publishMods") {
-            displayName = "${project.version} (${if (project.name == "neoforge") "NeoForge" else project.name.capitalize()})"
+            displayName = "${project.version} (${if (project.name == "neoforge") "NeoForge" else project.name.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    getDefault()
+                ) else it.toString()
+            }
+            })"
             version = "${project.version}-${project.name}"
             changelog = rootProject.file("CHANGELOG.md").readText()
             type = ReleaseType.STABLE

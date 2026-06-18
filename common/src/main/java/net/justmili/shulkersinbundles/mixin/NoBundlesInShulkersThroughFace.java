@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ShulkerBoxBlockEntity.class)
 public class NoBundlesInShulkersThroughFace {
     @Inject(method = "canPlaceItemThroughFace", at = @At("HEAD"), cancellable = true)
-    private void preventBundlesInShulkers(int slot, ItemStack stack, Direction direction, CallbackInfoReturnable<Boolean> cir) {
-        if (stack.getOrDefault(DataComponents.BUNDLE_CONTENTS, BundleContents.EMPTY) != BundleContents.EMPTY) {
+    private void preventBundlesInShulkers(int slot, ItemStack itemStack, Direction direction, CallbackInfoReturnable<Boolean> cir) {
+        if (itemStack.getOrDefault(DataComponents.BUNDLE_CONTENTS, BundleContents.EMPTY) != BundleContents.EMPTY) {
             cir.setReturnValue(false);
         }
     }

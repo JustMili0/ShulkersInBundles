@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ShulkerBoxSlot.class)
 public class NoBundlesInShulkers {
     @Inject(method = "mayPlace", at = @At("HEAD"), cancellable = true)
-    private void preventBundlesInShulkers(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (stack.getOrDefault(DataComponents.BUNDLE_CONTENTS, BundleContents.EMPTY) != BundleContents.EMPTY) {
+    private void preventBundlesInShulkers(ItemStack itemStack, CallbackInfoReturnable<Boolean> cir) {
+        if (itemStack.getOrDefault(DataComponents.BUNDLE_CONTENTS, BundleContents.EMPTY) != BundleContents.EMPTY) {
             cir.setReturnValue(false);
         }
     }

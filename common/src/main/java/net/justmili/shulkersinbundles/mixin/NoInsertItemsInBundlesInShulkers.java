@@ -21,7 +21,7 @@ public abstract class NoInsertItemsInBundlesInShulkers {
     }
 
     @Inject(method = "overrideOtherStackedOnMe", at = @At("HEAD"), cancellable = true)
-    private void preventItemsInBundlesInShulkers(ItemStack self, ItemStack other, Slot slot, ClickAction clickAction, Player player, SlotAccess slotAccess, CallbackInfoReturnable<Boolean> cir) {
+    private void preventItemsInBundlesInShulkers(ItemStack self, ItemStack other, Slot slot, ClickAction clickAction, Player player, SlotAccess carriedItem, CallbackInfoReturnable<Boolean> cir) {
         if (clickAction == ClickAction.PRIMARY && !other.isEmpty()) {
             if (slot instanceof ShulkerBoxSlot) {
                 playInsertFailSound(player);
