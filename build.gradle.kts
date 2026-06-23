@@ -3,7 +3,7 @@ plugins {
 }
 
 base {
-	archivesName.set("${rootProject.property("archives_base_name")}-${rootProject.property("mod_version")}+mc26.2-FabricExperimental")
+	archivesName.set("${rootProject.property("archives_base_name")}-${rootProject.property("mod_version")}+mc26.3-FabricExperimental")
 }
 
 repositories {
